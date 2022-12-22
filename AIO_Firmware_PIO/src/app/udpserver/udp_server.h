@@ -28,10 +28,16 @@ extern WebServer server;
 extern APP_OBJ udp_server_app;
 
 void initAP();
-void  initUdp();
+void initUdp();
+void start_web_config();
+void stop_web_config();
 
 //保存设置
 //保存相册的播放间隔，单位为毫秒
-void savePictureConf(const String intervalTime);
+void savePictureConf();
+//设置视频媒体的播放参数
+void saveMediaConf();
+//上传图片
+void handleFileUpload();
 
 #endif
