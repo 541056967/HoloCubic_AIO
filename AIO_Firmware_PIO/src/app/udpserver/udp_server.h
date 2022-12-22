@@ -1,8 +1,13 @@
 #ifndef APP_SERVER_H
 #define APP_SERVER_H
 
+#include <WString.h>
 #include "sys/interface.h"
+#include "sys/app_controller.h"
+
+extern AppController *app_controller; // APP控制器
 #define SERVER_APP_NAME "WebServer"
+#define IMAGE_PATH "/image"
 
 #ifdef ESP8266
 #include <ESP8266WiFi.h>      // Built-in
@@ -20,6 +25,13 @@ extern ESP8266WebServer server;
 extern WebServer server;
 #endif
 
-extern APP_OBJ server_app;
+extern APP_OBJ udp_server_app;
+
+void initAP();
+void  initUdp();
+
+//保存设置
+//保存相册的播放间隔，单位为毫秒
+void savePictureConf(const String intervalTime);
 
 #endif

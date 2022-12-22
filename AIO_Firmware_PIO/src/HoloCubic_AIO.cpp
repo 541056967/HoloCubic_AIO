@@ -151,7 +151,7 @@ void setup()
     app_controller->app_install(&file_manager_app);
 #endif
 
-    app_controller->app_install(&server_app);
+    app_controller->app_install(&udp_server_app);
 
 #if APP_IDEA_ANIM_USE
     app_controller->app_install(&idea_app);

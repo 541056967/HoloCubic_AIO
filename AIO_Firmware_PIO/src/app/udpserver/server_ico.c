@@ -169,4 +169,3 @@ const lv_img_dsc_t app_server = {
   .header.cf = LV_IMG_CF_INDEXED_4BIT,
   .data = app_server_map,
 };
-
